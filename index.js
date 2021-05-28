@@ -29,6 +29,7 @@ app.post("/update-or-create", async (req,res) => {
         });
     }else{
         otp["otp"] = req.body.otp;
+        otp["phoneNo"] = req.body.phoneNo;
     }
     otp.save().then(() => {
         res.send("success");
